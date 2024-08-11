@@ -1,0 +1,36 @@
+@use "_mixin";
+#breadcrumb-sec {
+  padding-top: 40px;
+  nav {
+    .breadcrumb {
+			margin: 0;
+      .breadcrumb-item {
+				& + .breadcrumb-item::before {
+					content: $breadcrumb-divider; 
+					color: $breadcrumb-divider-color; 
+					width: 16px;
+					height: 16px;
+					margin: 5px 0 0 8px;
+				}
+        a {
+          @include mixin.subtitle-1;
+          color: $secondary-2-100;
+        }
+        &.active {
+					@include mixin.title-4;
+          color: $gray-5;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #breadcrumb-sec{
+    padding: 0;
+    nav{
+      padding: 20px 16px 0;
+    }
+  }
+  
+}

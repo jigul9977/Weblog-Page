@@ -1,0 +1,42 @@
+@mixin heading-2 {
+  font-family: IRANYekan-Heavy;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 64px;
+}
+@mixin heading-5 {
+  font-family: IRANYekan-XBlack;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 44px;
+}
+@mixin subtitle-1 {
+  font-family: IRANSans-Medium;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 28px;
+}
+@mixin title-2 {
+  font-family: IRANSans-Bold;
+  font-weight: 700;
+  line-height: 36px;
+  font-size: 18px;
+}
+@mixin title-3 {
+  font-family: IRANSans-Bold;
+  font-weight: 700;
+  line-height: 32px;
+  font-size: 16px;
+}
+@mixin title-4 {
+  font-family: IRANSans-Bold;
+  font-weight: 700;
+  line-height: 28px;
+  font-size: 14px;
+}
+@mixin body {
+  font-family: IRANSans-Medium;
+  font-weight: 500;
+  line-height: 28px;
+  font-size: 16px;
+}

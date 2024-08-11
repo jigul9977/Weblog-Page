@@ -1,0 +1,96 @@
+@use "_mixin";
+
+#footer-sec {
+  background-color: $gray-1;
+  border-bottom: 8px solid $secondary-2-100;
+  .footer-inside {
+    padding-top: 48px;
+    // padding-bottom: 48px;
+    .row {
+      .footer-content {
+        .footer-description {
+          flex-basis: 55%;
+          // margin-left: 112px;
+          .footer-logo {
+            margin-bottom: 24px;
+            img {
+              width: 87px;
+              height: 37px;
+            }
+          }
+          .desc-text {
+            @include mixin.subtitle-1;
+            color: $secondary-2-100;
+            margin-bottom: 56px;
+          }
+        }
+        .footer-services,
+        .footer-fast-access {
+          flex-basis: 15%;
+          span {
+            @include mixin.title-3;
+            color: $secondary-2-100;
+            margin: 0;
+          }
+          a {
+            @include mixin.subtitle-1;
+            color: $secondary-2-100;
+          }
+          .nav {
+            margin-top: 20px;
+            a {
+              padding: 0;
+              margin-bottom: 12px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        .footer-services {
+          margin-left: 16px;
+        }
+      }
+      .footer-copyright {
+        margin: 40px 0;
+        p {
+          @include mixin.title-4;
+          color: $secondary-2-100;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #footer-sec {
+    padding: 0;
+    .footer-inside {
+      padding: 48px 16px 40px;
+      .row {
+        .footer-content {
+          flex-wrap: wrap;
+          .footer-description {
+            flex-basis: 100%;
+            .desc-text {
+              margin-bottom: 28px;
+            }
+          }
+          .footer-services,
+          .footer-fast-access {
+            flex-basis: 0;
+            flex-grow: 1;
+            display: inline-block;
+            .nav {
+              margin-top: 16px;
+            }
+          }
+        }
+        .footer-copyright {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

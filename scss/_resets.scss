@@ -1,0 +1,28 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: IRANSans; */
+  font-family: IRANSans-Medium;
+}
+body {
+  direction: rtl;
+  background-color: $gray-0;
+}
+a {
+  text-decoration: none;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  max-width: 1200px!important;
+  padding: 0;
+}

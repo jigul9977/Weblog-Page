@@ -1,0 +1,126 @@
+// start header section style
+@use "mixin";
+
+#header {
+  margin-top: 11px;
+  .container {
+    padding: 20px 0;
+    #logo {
+      a {
+        img {
+          height: 37px;
+        }
+      }
+    }
+  }
+  .navigation {
+    padding: 0;
+    .navbar-toggler {
+      width: 37px;
+      height: 37px;
+      padding: 0;
+      border: none;
+      outline: 0;
+    }
+    .customize-navigation {
+      .nav-item {
+        margin-left: 12px;
+        &:last-child {
+          margin: 0;
+        }
+        .nav-link {
+          @include mixin.subtitle-1;
+          color: $secondary-2-100;
+          padding: 4.5px 12px;
+          .nav-item-icon{
+            display: none;
+          }
+          &.active {
+            position: relative;
+            @include mixin.title-4;
+            color: $secondary-1-100;
+            &::after {
+              cursor: default;
+              position: absolute;
+              content: "";
+              bottom: -21px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 16px;
+              height: 2px;
+              border-radius: 1px;
+              background-color: $secondary-1-100;
+            }
+          }
+        }
+      }
+    }
+  }
+  .register-login-btn {
+    background-color: $secondary-2-100;
+    border-radius: 8px;
+    padding: 0 10px 0 0;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $secondary-2-100 !important;
+    }
+    a {
+      span {
+        @include mixin.title-4;
+        color: $gray-0;
+        margin: 4px 2px 4px 12px;
+      }
+      svg {
+        vertical-align: -6px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    .container {
+      padding: 0 16px;
+      .register-login-btn {
+        padding: 0;
+        width: 37px;
+        height: 37px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      .navigation{
+        .customize-navigation{
+          .nav-item{
+            margin: 0 8px 16px ;
+            .nav-link{
+              .nav-item-icon{
+                display: inline-block;
+                margin-left: 16px;
+              }
+              &.active{
+                background-color: $gray-2;
+                border-radius: 8px;
+                color: $secondary-2-100;
+                &::after{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// end header section style
